@@ -21,7 +21,7 @@ def research(db_name: str, method: str, templ_to: int) -> Tuple[List, List, List
         print("==================================")
         print(f"Current param: {param}")
         # Разделяем выборку
-        X_train, X_test, y_train, y_test = split_data(images, templ_to)
+        X_train, X_test, y_train, y_test = split_data(images, templ_to=templ_to)
 
         classifier.fit(X_train, y_train, param)
 
